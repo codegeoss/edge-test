@@ -85,26 +85,26 @@ packages:
     dependency: transitive
     description:
       name: device_info_plus
-      sha256: a7fd703482b391a87d60b6061d04dfdeab07826b96f9abd8f5ed98068acc0074
+      sha256: "98f28b42168cc509abc92f88518882fd58061ea372d7999aecc424345c7bff6a"
       url: "https://pub.dev"
     source: hosted
-    version: "10.1.2"
+    version: "11.5.0"
   device_info_plus_platform_interface:
     dependency: transitive
     description:
       name: device_info_plus_platform_interface
-      sha256: "0b04e02b30791224b31969eb1b50d723498f402971bff3630bca2ba839bd1ed2"
+      sha256: e1ea89119e34903dca74b883d0dd78eb762814f97fb6c76f35e9ff74d261a18f
       url: "https://pub.dev"
     source: hosted
-    version: "7.0.2"
+    version: "7.0.3"
   edge_telemetry_flutter:
     dependency: "direct main"
     description:
       name: edge_telemetry_flutter
-      sha256: "3febfb0f2f9554a42cc1a912be6b789e8b6eb52f8f76a43ac8c249abf8b47045"
+      sha256: f8d285e882a2fd0cd8391ad7b62c0719721117abea216617a33abd9211e7356a
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "1.1.3"
   fake_async:
     dependency: transitive
     description:
@@ -446,10 +446,10 @@ packages:
     dependency: transitive
     description:
       name: win32_registry
-      sha256: "21ec76dfc731550fd3e2ce7a33a9ea90b828fdf19a5c3bcf556fa992cfa99852"
+      sha256: "6f1b564492d0147b330dd794fee8f512cec4977957f310f9951b5f9d83618dae"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.5"
+    version: "2.1.0"
   xml:
     dependency: transitive
     description:
