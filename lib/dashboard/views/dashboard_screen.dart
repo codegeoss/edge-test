@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test/dashboard/cubits/fetch_posts_cubit.dart';
 
-class NewDashboardScreen extends StatelessWidget {
+class NewDashboardScreen extends StatefulWidget {
   const NewDashboardScreen({super.key});
+
+  @override
+  State<NewDashboardScreen> createState() => _NewDashboardScreenState();
+}
+
+class _NewDashboardScreenState extends State<NewDashboardScreen> {
+  @override
+  void initState() {
+    context.read<FetchPostsCubit>().fetchPosts();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -193,7 +206,31 @@ class NewDashboardScreen extends StatelessWidget {
           _buildSectionTitle('Last Transactions', 'View history'),
           const SizedBox(height: 10),
           Column(
-            children: List.generate(4, (index) => _buildTransactionTile()),
+            children: [
+              BlocBuilder<FetchPostsCubit, FetchPostsState>(
+                builder: (context, state) {
+                  return state.maybeWhen(
+                    orElse: SizedBox.shrink,
+                    loading: CircularProgressIndicator.new,
+                    loaded: (result) => ListView.builder(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: result.length,
+                      itemBuilder: (context, index) {
+                        final item = result[index];
+                        return ListTile(
+                          leading: Text(item.id.toString()),
+                          title: Text(item.title),
+                          subtitle:
+                              Text(item.body, overflow: TextOverflow.ellipsis),
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
         ],
       ),

@@ -31,12 +31,6 @@ class NetworkUtil {
 
     dio.interceptors.add(
       InterceptorsWrapper(
-        onRequest: (options, handler) async {
-          // options.headers['Authorization'] =
-          //     'Bearer ${HiveServiceImplementation().retrieveToken() ?? ''}';
-          //
-          // return handler.next(options);
-        },
         onError: (DioException e, ErrorInterceptorHandler handler) async {
           return handler.next(e);
         },
