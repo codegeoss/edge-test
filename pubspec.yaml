@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   bloc: ^9.0.0
+  dio: ^5.8.0+1
   edge_telemetry_flutter: ^1.0.1
   flutter:
     sdk: flutter
@@ -15,6 +16,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.20.2
+  logger: ^2.6.0
+  pretty_dio_logger: ^1.4.0
 
 dev_dependencies:
 #  bloc_test: ^9.1.7
