@@ -14,6 +14,7 @@ Future<void> main() async {
     endpoint: 'your-opentelemetry-endpoint',
     serviceName: 'my-app',
     enableLocalReporting: true,
+    runAppCallback: () {},
   );
 
   TestConfig(
