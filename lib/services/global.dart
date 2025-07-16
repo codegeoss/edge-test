@@ -7,7 +7,7 @@ class TestValues {
   final String urlScheme;
   final String baseDomain;
 
-  String get baseUrl => '$urlScheme://$baseDomain/api/v1';
+  String get baseUrl => '$urlScheme://$baseDomain';
 }
 
 class TestConfig {

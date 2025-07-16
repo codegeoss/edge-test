@@ -64,7 +64,14 @@ class NetworkUtil {
         queryParameters: queryParameters,
       );
 
-      final responseBody = response.data as Map<String, dynamic>;
+      var responseBody = <String, dynamic>{};
+
+      if (response.data is List) {
+        responseBody['data'] = response.data;
+      }
+      if (response.data is Map) {
+        responseBody = response.data as Map<String, dynamic>;
+      }
 
       if (responseBody.isEmpty) {
         throw Failure(message: 'An error occurred, please try again later');
