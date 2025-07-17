@@ -1,0 +1,2 @@
+/Users/marvintowett/AndroidStudioProjects/edge-test-master/android/app/.cxx/Debug/s7i6l73l/x86/CMakeFiles/edit_cache.dir
+/Users/marvintowett/AndroidStudioProjects/edge-test-master/android/app/.cxx/Debug/s7i6l73l/x86/CMakeFiles/rebuild_cache.dir
