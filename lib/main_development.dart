@@ -17,6 +17,12 @@ Future<void> main() async {
     runAppCallback: () => const App(),
   );
 
+  EdgeTelemetry.instance.setUserProfile(
+    name: 'marvin towett',
+    email: 'mktowett@example.com',
+    phone: '+254721888560',
+  );
+
   TestConfig(
     values: TestValues(
       urlScheme: 'https',

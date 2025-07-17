@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test/dashboard/cubits/fetch_posts_cubit.dart';
+import 'package:test/dashboard/views/post_screen.dart';
 
 class NewDashboardScreen extends StatefulWidget {
   const NewDashboardScreen({super.key});
@@ -220,6 +221,13 @@ class _NewDashboardScreenState extends State<NewDashboardScreen> {
                       itemBuilder: (context, index) {
                         final item = result[index];
                         return ListTile(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute<Widget>(
+                                    builder: (context) =>
+                                        const PostScreen(),),);
+                          },
                           leading: Text(item.id.toString()),
                           title: Text(item.title),
                           subtitle:
