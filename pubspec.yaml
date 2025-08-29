@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   bloc: ^9.0.0
-  edge_telemetry_flutter: ^1.0.1
+  edge_telemetry_flutter: ^1.5.6
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
